@@ -4,12 +4,9 @@ An API that queues emails using Bull and Nodemailer
 
 ## To run the application:
 
-```
-1. npm install
-```
-```
-2. npm run start
-```
+1. ```npm install```
+  
+2. ```npm run start```
 
 ## POST /user/create
 
