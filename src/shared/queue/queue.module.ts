@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { BullModule } from './bull/bull.module';
+import { LibBullModule } from './bull/lib-bull.module';
 
 @Module({
-  imports: [BullModule]
+  imports: [LibBullModule],
 })
 export class QueueModule {}
