@@ -2,12 +2,12 @@ import { LibBullModule } from './../../shared/queue/bull/lib-bull.module';
 import { CreateUserService } from './services/CreateUserService.service';
 import { UserRepository } from './repositories/UserRepository';
 import { CreateUserController } from './controllers/CreateUserController';
-import { PrismaService } from './../../shared/database/prisma/services/prisma.service';
 import { Module } from '@nestjs/common';
+import { DatabaseModule } from 'src/shared/database/database.module';
 
 @Module({
-  imports: [LibBullModule],
-  providers: [UserRepository, CreateUserService, PrismaService],
+  imports: [LibBullModule, DatabaseModule],
+  providers: [UserRepository, CreateUserService],
   controllers: [CreateUserController],
   exports: [UserRepository],
 })
